@@ -141,7 +141,9 @@ function OpenAssessmentEditor(runtime, element) {
     /**
     Initialize the editing interface on page load.
     **/
+    console.log("OpenAssessment Edit: installing document ready editor");
     $(function($) {
+        console.log("OpenAssessment Edit: document ready!");
         var server = new OpenAssessment.Server(runtime, element);
         var view = new OpenAssessment.StudioView(runtime, element, server);
         view.load();

@@ -332,14 +332,20 @@ OpenAssessment.BaseView.prototype = {
     }
 };
 
+console.log("Defining OpenAssessment Block");
+
 /* XBlock JavaScript entry point for OpenAssessmentXBlock. */
 function OpenAssessmentBlock(runtime, element) {
     /**
     Render views within the base view on page load.
     **/
-    $(function($) {
+    console.log("Installing document ready handler: OpenAssessment");
+    debugger
+    var test = function($) {
+        console.log("OpenAssessment: document ready!");
         var server = new OpenAssessment.Server(runtime, element);
         var view = new OpenAssessment.BaseView(runtime, element, server);
         view.load();
-    });
+    };
+    $(test);
 }
